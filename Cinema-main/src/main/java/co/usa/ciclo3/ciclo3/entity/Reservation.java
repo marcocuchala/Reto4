@@ -21,7 +21,7 @@ public class Reservation implements Serializable{
     private Date startDate;
     private Date devolutionDate;
     private String status="created";
-    //private String score;
+    private String score;
     
     @ManyToOne
     @JoinColumn(name = "id")
@@ -63,6 +63,14 @@ public class Reservation implements Serializable{
 
     public void setStatus(String status) {
         this.status = status;
+    }
+    
+    public String getScore() {
+        return score;
+    }
+
+    public void setScore(String score) {
+        this.score = score;
     }
 
     public Cinema getCinema() {
