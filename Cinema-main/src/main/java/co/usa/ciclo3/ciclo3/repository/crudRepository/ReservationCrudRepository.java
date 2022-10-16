@@ -9,8 +9,8 @@ import org.springframework.data.repository.CrudRepository;
 
 
 public interface ReservationCrudRepository extends CrudRepository<Reservation, Integer>{
-   @Query ("SELECT c.client. COUNT(c.client)FROM resevaion AS c group by c.clinet order by COUNT(c.client)DESC")
-    public List <Object[]> countTotalReservationbyClinet();
+   @Query ("SELECT c.client. COUNT(c.client)FROM Reservation AS c group by c.client order by COUNT(c.client)DESC")
+    public List <Object[]> countTotalReservationbyClient();
     
     public List <Reservation> findAllbyStaus(String status);
     
